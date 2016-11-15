@@ -24,12 +24,16 @@ public class webtest {
         driver.findElement(By.name("q")).sendKeys("Кононенко Сергей Владимирович");
         driver.findElement(By.name("btnG")).click();
         driver.manage().timeouts().implicitlyWait(3, SECONDS);
-        WebElement searchResult1 = driver.findElement(By.xpath("(//div[@id='rso']//a)[1]"));
-        String searchResult1Text = searchResult1.getText();
-        System.out.println(searchResult1Text);
+        for (int i=1;i<=10; i++) {
+         System.out.println(driver.findElement(By.xpath("(//h3[@class='r']//a)["+i+"]")).getAttribute("href"));
+        }
+        //WebElement searchResult1 = driver.findElement(By.xpath("(//h3[@class='r']//a)[1]"));
+        //String searchResult1Text = searchResult1.getAttribute("href");
+        //System.out.println(driver.findElement(By.xpath("(//h3[@class='r']//a)[1]")).getAttribute("href"));
+
         driver.close();
-        if (searchResult1Text.contains("КОНОНЕНКО СЕРГЕЙ ВЛАДИМИРОВИЧ"))
-            System.out.println("true");
-        else System.out.println("false");
+        //if (searchResult1Text.contains("КОНОНЕНКО СЕРГЕЙ ВЛАДИМИРОВИЧ"))
+            //System.out.println("true");
+        //else System.out.println("false");
     }
 }
