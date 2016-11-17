@@ -21,7 +21,7 @@ public class EnterWords  {
         driver.findElement(By.id("gt-submit")).click();
         driver.manage().timeouts().implicitlyWait(3, SECONDS);
         String se = driver.findElement(By.xpath("//span[@id='result_box']/span")).getText();
-        driver.close();
+        //driver.close();
         return se;
     }
 }
