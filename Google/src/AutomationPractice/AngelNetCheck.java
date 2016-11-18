@@ -1,12 +1,9 @@
 package AutomationPractice;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import static java.util.concurrent.TimeUnit.SECONDS;
 
 
 /**
@@ -17,19 +14,16 @@ public class AngelNetCheck {
         System.setProperty("webdriver.chrome.driver", "D://Tester/GoogleDriver/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.get("http://angel.net/~nic/passwd.current.html");
-        String mp="P@ssw0rd",site="vk.com";
-        for (int i=1; i<=10; i++) {
-            System.out.println("The password for the site \"vk"+i+".com\" is "+GetPass(driver, mp, "vk" + i + ".com"));
+        String MasterPass="P@ssw0rd";
+        String[] SiteNames   = new String[]{"site1.com","site2.com","site3.com","site4.com","site5.com"};
+        for (int i=0; i<SiteNames.length; i++) {
+            System.out.println("The password for the site "+SiteNames[i] + " is " + GetPass(driver, MasterPass, SiteNames[i]));
         }
-        String p1=GetPass(driver, mp, site);
+        String p1=GetPass(driver, MasterPass, SiteNames[0]);
         int TrueCount=0, Cases=100;
-        for (int i=1;i<=Cases;i++) if (p1.equals(GetPass(driver, mp, site))) TrueCount++;
-        if (TrueCount==Cases) {
-            System.out.println("Site is pretty good");
-        }
-        else {
-            System.out.println("Site is bad");
-        }
+        for (int i=1;i<=Cases;i++) if (p1.equals(GetPass(driver, MasterPass, SiteNames[0]))) TrueCount++;
+        if (TrueCount==Cases) System.out.println("Site is pretty good");
+        else System.out.println("Site is bad");
         driver.close();
     }
     private static String GetPass(WebDriver driver, String pass, String SiteName) {
