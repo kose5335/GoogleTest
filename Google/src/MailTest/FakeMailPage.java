@@ -9,19 +9,24 @@ import org.openqa.selenium.WebElement;
  */
 public class FakeMailPage {
     public static void checkReceiveMail(WebDriver driver2) {
-        driver2.switchTo ().frame ("emailFrame");
-        String recievedText = driver2.findElement (By.xpath ("/html/body")).getText ();
-        System.out.println(recievedText);
-        if (recievedText.contains (FakeEmailGenTest.CHECK_TEXT)) System.out.println("The test is ok");
-        else System.out.println("The test is failed");
-        driver2.switchTo ().defaultContent ();
+        try {
+            driver2.switchTo ().frame ("emailFrame");
+            String recievedText = driver2.findElement (By.xpath ("/html/body")).getText ();
+            System.out.println(recievedText);
+            if (recievedText.contains (FakeEmailGenTest.CHECK_TEXT)) System.out.println("The test is ok");
+            else System.out.println("The test is failed");
+            driver2.switchTo ().defaultContent ();
+        } catch (Exception e) {
+            System.out.println("The mail was not sent");
+        }
+
     }
 
     public static void openFakeMail(WebDriver driver2) {
         driver2.get ("http://www.fakemailgenerator.com");
         WebElement userNameField = driver2.findElement (By.xpath ("//input[@id='home-email']"));
         userNameField.clear ();
-        userNameField.sendKeys (FakeEmailGenTest.USER_NAME);
+        userNameField.sendKeys (GetRandUserName.userName);
         WebElement selectDomainButton = driver2.findElement (By.id ("domain"));
         //System.out.print (selectDomainButton.getText ());
         selectDomainButton.click ();
