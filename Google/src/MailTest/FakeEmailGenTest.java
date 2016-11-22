@@ -13,7 +13,7 @@ public class FakeEmailGenTest {
     public static final String DOMAIN_NAME = "@rhyta.com";
     public static final String CHECK_TEXT = "Check Test";
     public static final String MAIL_BOX_NAME = "kononenko_sv";
-    public static final String PASS = "762312cdr";
+    public static final String PASS = "";
     public static final String MAIL_TOPIC = "TestLetter";
 
     public static void main(String[] args) {
