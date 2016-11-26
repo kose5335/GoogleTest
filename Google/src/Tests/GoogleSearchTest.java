@@ -23,7 +23,7 @@ public class GoogleSearchTest {
     public void setUp() throws Exception {
         System.setProperty("webdriver.chrome.driver", "D://Tester/GoogleDriver/chromedriver.exe");
         chromeDriver = new ChromeDriver ();
-        chromeDriver.manage ().timeouts ().implicitlyWait (10, TimeUnit.SECONDS);
+        chromeDriver.manage ().timeouts ().implicitlyWait (5, TimeUnit.SECONDS);
         chromeDriver.get ("https://www.google.com.ua/");
         System.out.println ("The test is started");
     }
@@ -31,7 +31,7 @@ public class GoogleSearchTest {
     @After
     public void tearDown() throws Exception {
        chromeDriver.close ();
-       System.out.println ("The test is ended");
+       System.out.println ("The test is finished");
     }
 */
     @Test

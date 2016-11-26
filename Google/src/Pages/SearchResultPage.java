@@ -19,7 +19,10 @@ public class SearchResultPage {
     @FindBy(how= How.XPATH, using="(id(\"rso\")//a)[1]")
     private WebElement firstLink;
 
-    List<WebElement> links = driver.findElements (By.xpath ("//h3[@class='r']//a"));
+    @FindBy(how=How.XPATH, using="//button[@name=\"btnG\"]/span[1]")
+    private WebElement searchButton;
+
+    //List<WebElement> links = driver.findElements (By.xpath ("//h3[@class='r']//a"));
 
     public SearchResultPage(WebDriver driver) {
         this.driver = driver;
@@ -27,12 +30,15 @@ public class SearchResultPage {
     }
 
     public String getFirstLink() {
+        searchButton.click ();
+        //System.out.println (firstLink.getText ());
         return firstLink.getText ();
     }
-
+    /*
     public void print5Links() {
         for (int i=0;i<5;i++) {
             System.out.println("The "+i+" link is: "+ links.get (i).getAttribute ("href"));
         }
     }
+    */
 }

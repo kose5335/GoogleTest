@@ -15,18 +15,18 @@ public class GoogleHomePage {
 
     @FindBy(how= How.XPATH, using="id(\"lst-ib\")")
     private WebElement searchField;
-
+/*
     @FindBy(how=How.XPATH, using="//button[@name=\"btnG\"]/span[1]")
     private WebElement searchButton;
-
+*/
     public GoogleHomePage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
     public SearchResultPage search(String request) {
-        this.searchField.sendKeys (request);
-        this.searchButton.click ();
+        searchField.sendKeys (request);
+        //searchButton.click ();
         return new SearchResultPage (driver);
     }
 
