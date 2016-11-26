@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -22,7 +23,8 @@ public class SearchResultPage {
     @FindBy(how=How.XPATH, using="//button[@name=\"btnG\"]/span[1]")
     private WebElement searchButton;
 
-    // private List<WebElement> links = driver.findElements (By.xpath ("//h3[@class='r']//a"));
+    @FindBy(how=How.XPATH, using="//h3[@class='r']//a")
+    private List<WebElement> links;
 
     public SearchResultPage(WebDriver driver) {
         this.driver = driver;
@@ -34,11 +36,14 @@ public class SearchResultPage {
         //System.out.println (firstLink.getText ());
         return firstLink.getText ();
     }
-    /*
+
     public void print5Links() {
-        for (int i=0;i<5;i++) {
-            System.out.println("The "+i+" link is: "+ links.get (i).getAttribute ("href"));
+        System.out.println (links.size ());
+        Iterator<WebElement> i1= links.iterator();
+        for (int i=1;i<=5;i++) {
+            System.out.println("The "+i+" link is: "+ i1.next ().getAttribute ("href"));
         }
+
     }
-    */
+
 }
