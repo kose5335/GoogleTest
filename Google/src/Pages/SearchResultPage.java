@@ -22,7 +22,7 @@ public class SearchResultPage {
     @FindBy(how=How.XPATH, using="//button[@name=\"btnG\"]/span[1]")
     private WebElement searchButton;
 
-    //List<WebElement> links = driver.findElements (By.xpath ("//h3[@class='r']//a"));
+    // private List<WebElement> links = driver.findElements (By.xpath ("//h3[@class='r']//a"));
 
     public SearchResultPage(WebDriver driver) {
         this.driver = driver;

@@ -27,13 +27,13 @@ public class GoogleSearchTest {
         chromeDriver.get ("https://www.google.com.ua/");
         System.out.println ("The test is started");
     }
-/*
+
     @After
     public void tearDown() throws Exception {
        chromeDriver.close ();
        System.out.println ("The test is finished");
     }
-*/
+
     @Test
     public void testSearch() throws Exception {
         GoogleHomePage google = new GoogleHomePage (chromeDriver);
