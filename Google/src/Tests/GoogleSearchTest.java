@@ -25,7 +25,7 @@ public class GoogleSearchTest {
     public void setUp() throws Exception {
         System.setProperty("webdriver.chrome.driver", "D://Tester/GoogleDriver/chromedriver.exe");
         chromeDriver = new ChromeDriver ();
-        chromeDriver.manage ().timeouts ().implicitlyWait (10, TimeUnit.SECONDS);
+        chromeDriver.manage ().timeouts ().implicitlyWait (5, TimeUnit.SECONDS);
         chromeDriver.get ("https://www.google.com.ua/");
         System.out.println ("The test is started");
     }
@@ -39,10 +39,10 @@ public class GoogleSearchTest {
     @Test
     public void testSearch() throws Exception {
         GoogleHomePage google = new GoogleHomePage (chromeDriver);
-        SearchResultPage result = google.search("Trandafilov Vladimir");
+        SearchResultPage result = google.search("Трандафилов Владимир");
         //result.print5Links ();
-        //System.out.println (result.getFirstLink());
-        assertTrue(result.getFirstLink().contains("Trandafilov Vladimir"));
+        System.out.println (result.getFirstLink());
+        assertTrue(result.getFirstLink().contains("Трандафилов"));
 
     }
 }
