@@ -14,12 +14,12 @@ import java.util.List;
  */
 public class SearchResultPage {
 
-    private static WebDriver driver;
+    private WebDriver driver;
 
     @FindBy(how= How.XPATH, using="(id(\"rso\")//a)[1]")
     private WebElement firstLink;
 
-    static List<WebElement> links = driver.findElements (By.xpath ("//h3[@class='r']//a"));
+    List<WebElement> links = driver.findElements (By.xpath ("//h3[@class='r']//a"));
 
     public SearchResultPage(WebDriver driver) {
         this.driver = driver;
@@ -30,7 +30,7 @@ public class SearchResultPage {
         return firstLink.getText ();
     }
 
-    public static void print5Links() {
+    public void print5Links() {
         for (int i=0;i<5;i++) {
             System.out.println("The "+i+" link is: "+ links.get (i).getAttribute ("href"));
         }

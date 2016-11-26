@@ -31,7 +31,7 @@ public class GoogleSearchTest {
     @After
     public void tearDown() throws Exception {
        chromeDriver.close ();
-        System.out.println ("The test is ended");
+       System.out.println ("The test is ended");
     }
 */
     @Test
