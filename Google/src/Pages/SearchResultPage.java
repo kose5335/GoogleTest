@@ -38,7 +38,7 @@ public class SearchResultPage {
     }
 
     public void print5Links() {
-        System.out.println (links.size ());
+        System.out.println ("Total numbers of links on the page is: "+links.size ());
         Iterator<WebElement> i1= links.iterator();
         for (int i=1;i<=5;i++) {
             System.out.println("The "+i+" link is: "+ i1.next ().getAttribute ("href"));

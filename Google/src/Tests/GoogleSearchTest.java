@@ -40,8 +40,8 @@ public class GoogleSearchTest {
     public void testSearch() throws Exception {
         GoogleHomePage google = new GoogleHomePage (chromeDriver);
         SearchResultPage result = google.search("Трандафилов Владимир");
-        //result.print5Links ();
-        System.out.println (result.getFirstLink());
+        System.out.println ("The first link is: "+result.getFirstLink());
+        result.print5Links ();
         assertTrue(result.getFirstLink().contains("Трандафилов"));
 
     }
