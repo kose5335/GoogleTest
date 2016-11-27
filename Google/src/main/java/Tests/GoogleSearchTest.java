@@ -26,9 +26,9 @@ public class GoogleSearchTest {
     private WebDriver chromeDriver;
     private String value, expected;
 
-    public GoogleSearchTest(String value, String ecpected) {
+    public GoogleSearchTest(String value, String expected) {
         this.value = value;
-        this.expected = ecpected;
+        this.expected = expected;
     }
 
     @Parameterized.Parameters
