@@ -1,4 +1,4 @@
-package WebTesting;
+package AutomationPractice.TranslatorTest;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

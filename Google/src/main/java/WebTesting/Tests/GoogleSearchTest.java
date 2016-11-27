@@ -1,7 +1,7 @@
-package Tests;
+package WebTesting.Tests;
 
-import Pages.GoogleHomePage;
-import Pages.SearchResultPage;
+import WebTesting.Pages.GoogleHomePage;
+import WebTesting.Pages.SearchResultPage;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

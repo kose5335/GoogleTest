@@ -1,14 +1,4 @@
-package WebTesting;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-
-import java.util.Iterator;
-import java.util.List;
-
-import static java.util.concurrent.TimeUnit.SECONDS;
+package AutomationPractice.TranslatorTest;
 
 /**
  * Created by Sergey on 11/17/2016.

@@ -1,4 +1,4 @@
-package WebTesting;
+package AutomationPractice.TranslatorTest;
 
 /**
  * Created by Sergey on 11/17/2016.
