@@ -1,4 +1,4 @@
-package WebTesting.Tests;
+package WebTesting;
 
 import WebTesting.Pages.GoogleHomePage;
 import WebTesting.Pages.SearchResultPage;
@@ -36,7 +36,7 @@ public class GoogleSearchTest {
         Object[] [] data = new Object[][] {
                 {"Трандафилов Владимир", "Трандафилов"},
                 {"Таксюр Мария", "Таксюр"},
-                {"Дубровина Валентина", "Дубровина"}
+                {"Дубровина Валентина", "ДУБРОВИНА"}
         };
         return Arrays.asList(data);
     }
