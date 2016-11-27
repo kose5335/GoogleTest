@@ -22,7 +22,7 @@ public class MaiRuNewLetterPage {
     }
 
     public static void writeInText(WebDriver driver1) {
-        driver1.switchTo().frame (3);
+        driver1.switchTo().frame (2);
         //driver1.findElement (By.xpath ("//*[@id="toolkit-147975486920537composeEditor_ifr"]"))
         ////*[@id="toolkit-147975486920537composeEditor_ifr"]
         //toolkit-147975486920537composeEditor_ifr

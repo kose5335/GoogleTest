@@ -26,7 +26,7 @@ public class FillForm {
         while (i1.hasNext()) {
             System.out.println(i+" link text: "+i1.next().getText());
             i++;
-        };
+        }
         driver.findElement(By.name("firstname")).sendKeys("Sergey");
         driver.findElement(By.name("lastname")).sendKeys("Kononenko");
         driver.findElement(By.id("sex-0")).click();

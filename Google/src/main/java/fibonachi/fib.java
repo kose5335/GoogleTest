@@ -10,7 +10,12 @@ public class fib {
         //int sum=0;
         System.out.println("1="+n1);
         System.out.println("2="+n2);
-        for (int i=1; i<=28; i++) {
+        TheNextNum (n1, n2);
+    }
+
+    private static void TheNextNum(int n1, int n2) {
+        int n3;
+        for (int i = 1; i<=28; i++) {
             n3=n1+n2;
             System.out.println((i+2)+"="+n3);
             n1=n2; n2=n3;
@@ -18,3 +23,5 @@ public class fib {
     }
 
 }
+
+
