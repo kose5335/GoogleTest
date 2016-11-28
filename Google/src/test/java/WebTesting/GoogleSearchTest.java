@@ -20,11 +20,13 @@ import static org.junit.Assert.assertTrue;
  * Created by Sergey on 11/26/2016.
  */
 
+@SuppressWarnings("DefaultFileTemplate")
 @RunWith (value = Parameterized.class)
 public class GoogleSearchTest {
 
     private WebDriver chromeDriver;
-    private String value, expected;
+    private final String value;
+    private final String expected;
 
     public GoogleSearchTest(String value, String expected) {
         this.value = value;

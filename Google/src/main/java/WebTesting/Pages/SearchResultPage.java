@@ -12,8 +12,10 @@ import java.util.List;
 /**
  * Created by Sergey on 11/26/2016.
  */
+@SuppressWarnings("DefaultFileTemplate")
 public class SearchResultPage {
 
+    @SuppressWarnings("FieldCanBeLocal")
     private WebDriver driver;
 
     @FindBy(how= How.XPATH, using="(id(\"rso\")//a)[1]")

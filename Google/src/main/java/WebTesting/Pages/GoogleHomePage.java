@@ -9,6 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 /**
  * Created by Sergey on 11/26/2016.
  */
+@SuppressWarnings("DefaultFileTemplate")
 public class GoogleHomePage {
 
     private WebDriver driver;
