@@ -34,7 +34,7 @@ public class GoogleSearchTest {
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
         Object[] [] data = new Object[][] {
-                {"Трандафилов Владимир", "Трандафилов"},
+                {"Trandafilov Vladimir", "Trandafilov"},
                 {"Таксюр Мария", "Таксюр"},
                 {"Дубровина Валентина", "ДУБРОВИНА"}
         };
